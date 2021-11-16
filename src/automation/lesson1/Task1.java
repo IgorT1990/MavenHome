@@ -6,6 +6,7 @@ public class Task1 {
     public static void main(String[] args) {
         int xc = 10;
 
+
         double kelvin = 0;
         kelvin = xc + 273.16;
         double zk = kelvin;
