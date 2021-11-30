@@ -2,40 +2,46 @@ package automation.lesson5;
 
 public class Operations {
 
+    private static char operator = DataCalculator.getOperator();
     private int num1 = DataCalculator.getInt();
+    private static int result;
     private int num2 = DataCalculator.getInt();
-    private char operator = DataCalculator.getOperator();
-    private int result;
 
-    public Operations  add() {
-        if (operator == '+') {
-           this.result = num1 + num2;
-        }
-        return this;
-    }
 
-    public Operations remove() {
+
+    public  int remove() {
+        int result = 0;
         if (operator == '-') {
-            this.result = num1 - num2;
+            result = num1 - num2;
         }
-        return this;
+        return result;
 
     }
+    public  int add() {
+       int result = 0;
+        if (operator == '+') {
+            result = num1 + num2;
+        }
+        return result;
+    }
 
-    public Operations multiply() {
+    public  int multiply() {
+        int result = 0;
         if (operator == '*') {
-            this.result = num1 * num2;
+            result = num1 * num2;
         }
-        return this;
+        return result;
     }
 
 
-    public Operations separate() {
+    public  int separate() {
+       int result = 0;
         if (operator == '/') {
-            this.result = num1 / num2;
+            result = num1 / num2;
         }
-        return this;
+        return result;
     }
+
 
 }
 
