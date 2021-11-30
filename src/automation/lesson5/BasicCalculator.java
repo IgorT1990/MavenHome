@@ -1,29 +1,36 @@
 package automation.lesson5;
 
-
-public class BasicCalculator {
+public class BasicCalculator   {
     public static void main(String[] args) {
 
+        if (Operations.operator == '+') {
+            Operations operations = new Operations();
+            double result = operations.add();
+            System.out.println(result);
+        }
 
+        if  (Operations.operator == '-') {
+            Operations operations1 = new Operations();
+            double result1 = operations1.remove();
+            System.out.println(result1);
+        }
 
-        Operations operations = new Operations();
-        int add = operations.add();
-        System.out.println(add);
+        if (Operations.operator == '*') {
+            Operations operations2 = new Operations();
+            double result2 = operations2.multiply();
+            System.out.println(result2);
+        }
 
-        Operations operations1 = new Operations();
-        int remove = operations1.remove();
-        System.out.println(remove);
+        if (Operations.operator == '/') {
+            Operations operations3 = new Operations();
+            double result3 = operations3.separate();
+            System.out.println(result3);
+        }
 
-        Operations operations2 = new Operations();
-        int mul = operations2.multiply();
-        System.out.println(mul);
-
-        Operations operations3 = new Operations();
-        int sep = operations3.separate();
-        System.out.println(sep);
     }
 
 }
+
 
 
 
