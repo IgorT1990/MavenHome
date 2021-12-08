@@ -11,12 +11,18 @@ public class CardValue extends CardSuite {
 
         String[] deck = new String[noOfCards];
 
-        int count = 0;
-        for (String suite : suites) {
-            for (String value : values) {
-                deck[count++] = value + "Of" + suite;
+        try {
+            int count = 0;
+            for (String suite : suites) {
+                for (String value : values) {
+                    deck[count++] = value + "Of" + suite;
+                }
             }
         }
+        catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
+            arrayIndexOutOfBoundsException.printStackTrace();
+        }
+
 
         Random random = new Random();
         for (int i = 0; i < 100; i++) {
