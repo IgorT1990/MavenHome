@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression" verbose="1" parallel="classes" thread-count="5" >
+    <test name="Test">
+        <parameter name="param" value="value"/>
+        <classes>
+            <class name="testngTest.BeforeAfterActions1"/>
+            <class name="testngTest.BeforeAfterActions2"/>
+        </classes>
+    </test>
+
+</suite>
