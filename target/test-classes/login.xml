@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression" verbose="1">
+    <test name="LoginDataProvider" >
+        <parameter name="role" value="superAdmin"/>
+        <classes>
+            <class name="dataProvider.Param"/>
+        </classes>
+    </test>
+
+
+</suite>
