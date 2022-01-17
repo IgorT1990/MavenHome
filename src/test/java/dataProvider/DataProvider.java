@@ -1,9 +1,10 @@
+/*
 package dataProvider;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 @Test(groups = "Regression")
-public class DataProv {
+private class DataProv {
 
     @DataProvider(name = "login")
     public Object[][] data(){
@@ -27,3 +28,4 @@ public class DataProv {
 
     }
 }
+*/
