@@ -11,6 +11,9 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17 </maven.compiler.target>
+        <testNgVersion>7.5</testNgVersion>
+        <seleniumVersion>4.1.1</seleniumVersion>
+        <wdManager>5.0.3</wdManager>
     </properties>
 
     <dependencies>
@@ -22,13 +25,19 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.4.0</version>
+            <version>${testNgVersion}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.1.0</version>
+            <version>${seleniumVersion}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${wdManager}</version>
         </dependency>
     </dependencies>
     <build>
@@ -44,8 +53,16 @@
                     </suiteXmlFiles>-->
                     <systemPropertyVariables>
                         <!--suppress UnresolvedMavenProperty -->
-                        <siteUrl>${runSiteUrl}</siteUrl>>
+                        <siteUrl>${runSiteUrl}</siteUrl>
                     </systemPropertyVariables>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>16</source>
+                    <target>16</target>
                 </configuration>
             </plugin>
 
@@ -55,7 +72,7 @@
 
     <profiles>
     <profile>
-        <id>stage</id>>
+        <id>stage</id>
         <build>
             <plugins>
                 <plugin>
@@ -68,7 +85,7 @@
                                             </suiteXmlFiles>-->
                         <systemPropertyVariables>
                             <!--suppress UnresolvedMavenProperty -->
-                            <siteUrl>${runSiteUrl}</siteUrl>>
+                            <siteUrl>${runSiteUrl}</siteUrl>
                         </systemPropertyVariables>
                     </configuration>
                 </plugin>
