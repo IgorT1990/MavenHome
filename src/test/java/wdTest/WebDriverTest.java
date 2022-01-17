@@ -1,3 +1,4 @@
+/*
 package wdTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -18,4 +19,4 @@ public class WebDriverTest {
             driver = new FirefoxDriver();
         }
     }
-}
+}*/
