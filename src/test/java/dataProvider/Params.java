@@ -3,7 +3,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 @Test
-public class Param {
+public class Params {
 
     @Parameters({"role"})
     public void paramsMethod(String paramFromConf){

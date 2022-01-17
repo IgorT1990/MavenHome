@@ -21,4 +21,9 @@ public class DataProv {
     public void loginMethod(String user, String password, String role){
         System.out.printf("User: %s - Pass: %s - Role: %s%n", user, password, role);
     }
+
+    @Test(dependsOnGroups = "Login")
+    public void testCheck() {
+
+    }
 }
